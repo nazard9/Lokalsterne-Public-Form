@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Leave a review · Northwind Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="assets/css/tokens.css"><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-key="opiny-theme" data-default="light" data-page="form">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-logo" viewBox="0 0 24 24"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6l-4 3v-3H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M8 10h8M8 13h5"/></symbol>
+<symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.5-4.5L4 8M4 4v4h4M4 13a8 8 0 0 0 14.5 4.5L20 16M20 20v-4h-4"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14A8 8 0 1 1 10 4a6 6 0 0 0 10 10z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+</svg>
+<main class="pub">
+  <div class="pub-top"><div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="de" aria-pressed="false">DE</button></div></div>
+  <header class="pub-head"><div class="logo co" aria-hidden="true">NS</div><h1>Northwind Studio</h1><p>Musterstraße 12, 10115 Berlin, Germany</p></header>
+
+  <section class="card pub-card">
+    <!-- Welcome -->
+    <div class="intro" id="intro">
+      <p class="hi" id="hello">Welcome</p>
+      <h2 data-t="introTitle">How was working with Northwind Studio?</h2>
+      <p class="lead" data-t="introLead">Thank you for choosing us! Answer 3 quick questions and Opiny will turn them into a review draft for you. You can edit it before anything is posted.</p>
+      <div class="resume" id="resume" role="status" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.5-4.5L4 8M4 4v4h4M4 13a8 8 0 0 0 14.5 4.5L20 16M20 20v-4h-4"/></svg>
+        <div><b data-t="resumeTitle">Welcome back!</b> <span id="resumeText"></span></div>
+      </div>
+      <div class="facts">
+        <span class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-t="fact1">About 1 minute</span></span>
+        <span class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg><span data-t="fact2">3 questions</span></span>
+        <span class="fact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-t="fact3">You approve the final text</span></span>
+      </div>
+      <div class="intro-actions">
+        <button class="btn btn-primary" id="start" type="button" data-t="start">Start</button>
+        <button class="btn btn-ghost" id="restart" type="button" data-t="startOver" hidden>Start over</button>
+      </div>
+      <small data-t="introNote">Nothing is published until you choose to post it.</small>
+    </div>
+
+    <!-- Questions -->
+    <form id="flow" hidden novalidate>
+      <div class="pg-row"><span id="pgl" aria-live="polite"></span><span class="saved" id="saved"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-t="saved">Progress saved</span></span></div>
+      <div class="pg-track" id="pgbar" role="progressbar" aria-valuemin="0" aria-valuemax="3" aria-valuenow="1" aria-label="Progress"><div class="pg-fill" id="pgf"></div></div>
+
+      <fieldset class="step" data-name="role" data-type="radio" data-req="1" aria-describedby="h-role e-role">
+        <legend class="q-title"><span data-t="q1">What’s your role?</span><span class="req" aria-hidden="true">*</span><span class="sr" data-t="required">required</span></legend>
+        <p class="q-help" id="h-role" data-t="q1help">Choose one — we’ll move to the next question automatically.</p>
+        <p class="field-err" id="e-role" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg><span data-t="errChoose">Please choose an option to continue.</span></p>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="role" value="founder"><span class="mk"></span><span class="ol" data-t="o_founder">Founder / CEO</span><kbd>1</kbd></label>
+          <label class="opt"><input type="radio" name="role" value="marketing"><span class="mk"></span><span class="ol" data-t="o_marketing">Marketing lead</span><kbd>2</kbd></label>
+          <label class="opt"><input type="radio" name="role" value="pm"><span class="mk"></span><span class="ol" data-t="o_pm">Project / Delivery manager</span><kbd>3</kbd></label>
+          <label class="opt"><input type="radio" name="role" value="ops"><span class="mk"></span><span class="ol" data-t="o_ops">Operations / Office manager</span><kbd>4</kbd></label>
+          <label class="opt"><input type="radio" name="role" value="other" data-other="role-other"><span class="mk"></span><span class="ol" data-t="o_other">Other</span><kbd>5</kbd></label>
+        </div>
+        <div class="other-box" id="other-wrap" hidden>
+          <label for="role-other" data-t="otherLabel">What’s your role?</label>
+          <input id="role-other" class="inp-t" type="text" autocomplete="organization-title" data-tp="otherPh" placeholder="e.g. Head of Sales">
+          <p class="field-err" id="e-role-other" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg><span data-t="errOther">Please type your role, or choose another option.</span></p>
+        </div>
+      </fieldset>
+
+      <fieldset class="step" data-name="help" data-type="checkbox" data-req="1" aria-describedby="h-help e-help" hidden>
+        <legend class="q-title"><span data-t="q2">What did Northwind Studio help you with?</span><span class="req" aria-hidden="true">*</span><span class="sr" data-t="required">required</span></legend>
+        <p class="q-help" id="h-help" data-t="q2help">Select all that apply, then press Next.</p>
+        <p class="field-err" id="e-help" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg><span data-t="errSelect">Select at least one option.</span></p>
+        <div class="opts">
+          <label class="opt cb"><input type="checkbox" name="help" value="web"><span class="mk"></span><span class="ol" data-t="h_web">Website redesign</span><kbd>1</kbd></label>
+          <label class="opt cb"><input type="checkbox" name="help" value="brand"><span class="mk"></span><span class="ol" data-t="h_brand">Branding</span><kbd>2</kbd></label>
+          <label class="opt cb"><input type="checkbox" name="help" value="shop"><span class="mk"></span><span class="ol" data-t="h_shop">Online shop</span><kbd>3</kbd></label>
+          <label class="opt cb"><input type="checkbox" name="help" value="seo"><span class="mk"></span><span class="ol" data-t="h_seo">SEO &amp; content</span><kbd>4</kbd></label>
+          <label class="opt cb"><input type="checkbox" name="help" value="support"><span class="mk"></span><span class="ol" data-t="h_support">Ongoing support</span><kbd>5</kbd></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="step" data-name="note" data-type="text" aria-describedby="h-note" hidden>
+        <legend class="q-title"><span data-t="q3">Anything you’d tell another company considering Northwind Studio?</span> <span class="opt-tag" data-t="optional">Optional</span></legend>
+        <p class="q-help" id="h-note" data-t="q3help">A sentence or two in your own words makes the review sound like you.</p>
+        <textarea class="ta" id="note" name="note" rows="4" data-tp="notePh" placeholder="e.g. They delivered the first concepts in two days and kept us updated every week."></textarea>
+        <div class="ta-meta"><span class="ideas-l" data-t="ideas">Need an idea? Tap to add:</span><span class="count" id="count" aria-live="polite"></span></div>
+        <div class="ideas" id="ideas">
+          <button type="button" class="idea" data-t="i1">Fast delivery</button>
+          <button type="button" class="idea" data-t="i2">Clear communication</button>
+          <button type="button" class="idea" data-t="i3">Great design</button>
+          <button type="button" class="idea" data-t="i4">On budget</button>
+          <button type="button" class="idea" data-t="i5">Would hire again</button>
+        </div>
+      </fieldset>
+
+      <div class="pub-actions">
+        <button class="btn btn-ghost" id="back" type="button"><svg class="i"><use href="#i-arrow"/></svg><span data-t="back">Back</span></button>
+        <span class="kb-hint" aria-hidden="true"><kbd>Enter ↵</kbd> <span data-t="kbHint">to continue</span></span>
+        <button class="btn btn-primary" id="next" type="submit">Next</button>
+      </div>
+    </form>
+  </section>
+  <p class="pub-foot" data-t="foot">Powered by Opiny · Your answers are used to draft a review you can edit before posting.</p>
+</main>
+<button class="theme-fab" aria-label="Toggle light / dark"><svg class="i"><use href="#i-moon"/></svg></button>
+<script src="assets/js/app.js"></script>
+</body></html>

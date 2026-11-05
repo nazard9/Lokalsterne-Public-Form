@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your review · Northwind Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="assets/css/tokens.css"><link rel="stylesheet" href="assets/css/styles.css"></head>
+<body data-key="opiny-theme" data-default="light" data-page="review">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-logo" viewBox="0 0 24 24"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6l-4 3v-3H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M8 10h8M8 13h5"/></symbol>
+<symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.5-4.5L4 8M4 4v4h4M4 13a8 8 0 0 0 14.5 4.5L20 16M20 20v-4h-4"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14A8 8 0 1 1 10 4a6 6 0 0 0 10 10z"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+</svg>
+<main class="pub">
+  <div class="pub-top"><div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="de" aria-pressed="false">DE</button></div></div>
+  <header class="pub-head"><div class="logo co" aria-hidden="true">NS</div><h1>Northwind Studio</h1><p>Musterstraße 12, 10115 Berlin, Germany</p></header>
+  <section class="card pub-card">
+    <div class="rv-head"><div><h2 data-t="rvTitle">Your review is ready</h2><p class="rv-sub" data-t="rvSub">Drafted from your answers. Edit anything — it should sound like you.</p></div>
+      <button class="btn btn-secondary btn-sm" id="regen" type="button"><svg class="i"><use href="#i-refresh"/></svg><span data-t="regen">Rewrite</span></button></div>
+
+    <div class="based"><span class="based-l" data-t="based">Based on your answers:</span><span id="chips" class="chips-b"></span><a class="based-edit" href="index.html#q" data-t="editAnswers">Change answers</a></div>
+
+    <div class="rv-bar">
+      <div class="seg2" role="group" aria-label="Length"><button type="button" data-len="short" aria-pressed="true" data-t="short">Short</button><button type="button" data-len="long" aria-pressed="false" data-t="long">Detailed</button></div>
+      <span class="sent-inline"><span data-t="sentiment">Sentiment</span> <span class="tag positive" data-t="positive">Positive</span></span>
+    </div>
+    <label class="sr" for="review" data-t="rvLabel">Review text</label>
+    <textarea class="ta" id="review" rows="6"></textarea>
+    <div class="ta-meta"><span class="edited" id="edited" hidden data-t="edited">Edited by you</span><span class="count" id="wc"></span></div>
+
+    <div class="honest" role="note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span data-t="honest">Please post only if it reflects your real experience — change anything that isn’t accurate.</span></div>
+
+    <p class="pub-label" data-t="publishOn">Copy and publish on:</p>
+    <div class="plats">
+      <button class="plat" data-plat="Google" type="button"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span>Google</span><span class="rec" data-t="recommended">Recommended</span></button>
+      <button class="plat" data-plat="Trustpilot" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00b67a" d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.6 7L12 17.5 5.8 21.2l1.6-7L2 9.5l7.1-.6z"/></svg><span>Trustpilot</span></button>
+      <button class="plat" data-plat="Clutch" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#17313b" stroke-width="3"/><circle cx="12" cy="12" r="3" fill="#ef4335"/></svg><span>Clutch</span></button>
+    </div>
+    <p class="plat-help" data-t="platHelp">We copy the text for you and open the site — you just paste, rate and post.</p>
+    <div class="back-row"><a class="btn btn-ghost" href="index.html#q"><svg class="i"><use href="#i-arrow"/></svg><span data-t="backAnswers">Back to my answers</span></a></div>
+  </section>
+  <p class="pub-foot" data-t="foot2">Powered by Opiny</p>
+</main>
+
+<div class="modal-bg" id="copied" role="dialog" aria-modal="true" aria-labelledby="cp-t">
+  <div class="modal">
+    <button class="icon-btn x" aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+    <div class="ok-ic"><svg class="i"><use href="#i-copy"/></svg></div>
+    <h3 id="cp-t" data-t="copiedTitle">Your review has been copied!</h3>
+    <p id="cp-p"></p>
+    <div class="gmock" aria-hidden="true"><div class="gm-h" id="gm-h">Google</div><div class="stars"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></div><div class="gbox"><span id="gtext"></span><span class="paste">⌘V</span></div><div class="gbtns"><span class="c">Cancel</span><span class="p">Post</span></div></div>
+    <a class="btn btn-primary wide" id="openPlat" href="#" onclick="return false"></a>
+    <ol class="steps"><li><b>1</b><span data-t="s1">Paste</span></li><li><b>2</b><span data-t="s2">Rate</span></li><li><b>3</b><span data-t="s3">Post</span></li></ol>
+  </div>
+</div>
+<button class="theme-fab" aria-label="Toggle light / dark"><svg class="i"><use href="#i-moon"/></svg></button>
+<script src="assets/js/app.js"></script>
+</body></html>
