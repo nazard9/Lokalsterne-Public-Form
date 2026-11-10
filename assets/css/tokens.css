@@ -1,66 +1,91 @@
-/* Opiny admin — v6 "Untitled UI" tokens (proposed, 2026-10-27)
-   Reference R6: superfounder.io/guide/best-dashboard-ui-kits → #1 Untitled UI (untitledui.com).
-   Values follow Untitled UI's public colour/type scales (gray 25–900, brand purple 600 #7F56D9) — inferred. */
+/* Lokalsterne public form — tokens from Figma "Form UI" (file 81bRgeO5hSauWJrXOB8AGF, frame 1:60
+   "Agenturro · Desktop questionnaire"). The Figma file defines no variables, so every value below is
+   copied from the frame's fills, strokes, type and effects.
+   Not in Figma (added on purpose): dark theme values + the error colour, both derived from the same palette. */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
 :root {
   color-scheme: light;
-  --font-sans: "Inter", system-ui, sans-serif;
-  --text-xs: 12px; --lh-xs: 18px; --text-sm: 14px; --lh-sm: 20px;
-  --text-base: 14px; --lh-base: 20px; --text-lg: 18px; --lh-lg: 28px;
-  --text-2xl: 30px; --lh-2xl: 38px; --text-stat: 36px; --lh-stat: 44px;
-  --weight-display: 600; --weight-regular: 400; --weight-medium: 500;
-  --tracking-display: -0.02em; --tracking-body: 0;
 
-  --gray-25:#fcfcfd; --gray-50:#f9fafb; --gray-100:#f2f4f7; --gray-200:#eaecf0; --gray-300:#d0d5dd;
-  --gray-400:#98a2b3; --gray-500:#667085; --gray-600:#475467; --gray-700:#344054; --gray-800:#1d2939; --gray-900:#101828;
-  --brand-25:#fcfaff; --brand-50:#f9f5ff; --brand-100:#f4ebff; --brand-200:#e9d7fe; --brand-300:#d6bbfb;
-  --brand-500:#9e77ed; --brand-600:#7f56d9; --brand-700:#6941c6;
-  --success-50:#ecfdf3; --success-200:#abefc6; --success-500:#17b26a; --success-700:#067647;
-  --error-50:#fef3f2; --error-200:#fecdca; --error-500:#f04438; --error-700:#b42318;
-  --warning-50:#fffaeb; --warning-200:#fedf89; --warning-700:#b54708;
-  --blue-50:#eff8ff; --blue-200:#b2ddff; --blue-700:#175cd3;
+  /* ---- type (Inter) ---- */
+  --font-sans: "Inter", Arial, sans-serif;
+  --fs-display: 64px;  --lh-display: 1.04; --ls-display: -3.52px;  /* "Welcome."            Medium   */
+  --fs-title: 32px;    --lh-title: 1.14;   --ls-title: -1.28px;    /* question heading     Medium   */
+  --fs-wordmark: 28px; --lh-wordmark: 1.2; --ls-wordmark: -1.4px;  /* brand wordmark       SemiBold */
+  --fs-body: 14px;     --lh-body: 20px;                            /* lead, labels, buttons         */
+  --lh-option: 1.45;   --lh-hint: 1.6;
+  --fs-small: 12px;    --lh-small: 18px;                           /* footer                        */
+  --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600;
 
-  --color-bg:#ffffff; --color-bg-subtle:var(--gray-50); --color-header-bg:#fff; --color-surface:#fff;
-  --color-fill:var(--gray-50); --color-fill-strong:var(--gray-100);
-  --color-border:var(--gray-200); --color-border-subtle:var(--gray-200);
-  --color-text:var(--gray-900); --color-text-muted:var(--gray-600); --color-text-subtle:var(--gray-500);
-  --color-primary:var(--brand-600); --color-on-primary:#fff; --color-focus:var(--brand-300); --color-highlight:var(--brand-50);
+  /* ---- colour ---- */
+  --page-bg: #f5f6f2;
+  --atmo-top: #fafbf9; --atmo-bottom: #eef0ec; --atmo-peach: #f4e3d7; --atmo-sage: #dae3d6;
 
-  --tag-positive-bg:var(--success-50); --tag-positive-fg:var(--success-700);
-  --tag-generated-bg:var(--brand-50); --tag-generated-fg:var(--brand-700);
-  --tag-clicked-bg:var(--blue-50); --tag-clicked-fg:var(--blue-700);
-  --tag-negative-bg:var(--error-50); --tag-negative-fg:var(--error-700);
-  --tag-neutral-bg:var(--gray-50); --tag-neutral-fg:var(--gray-700);
-  --tag-required-bg:var(--error-50); --tag-required-fg:var(--error-700);
-  --tag-mapped-bg:var(--brand-50); --tag-mapped-fg:var(--brand-700);
+  --text: #181918;
+  --text-muted: #6e746a;          /* lead paragraph */
+  --text-subtle: #83897e;         /* hint, footer   */
 
-  --radius-pill:16px; --radius-card:12px; --radius-input:8px; --radius-sm:8px;
-  --sidebar-w:280px; --header-h:0px; --page-max:1280px; --page-pad-x:32px;
-  --card-pad:24px; --gap:24px; --section-gap:32px;
-  --btn-h:40px; --btn-h-sm:36px; --input-h:44px;
-  --cell-pad:16px 24px; --th-pad:12px 24px;
-  --shadow-xs:0 1px 2px rgba(16,24,40,.05);
-  --shadow-sm:0 1px 3px rgba(16,24,40,.1),0 1px 2px rgba(16,24,40,.06);
-  --shadow-float:0 12px 16px -4px rgba(16,24,40,.08),0 4px 6px -2px rgba(16,24,40,.03);
-  --shadow-pop:var(--shadow-float);
-  --ring-brand:0 0 0 4px rgba(158,119,237,.24);
-  --ease:ease; --dur:120ms;
+  --panel-bg: rgba(255,255,255,.64);
+  --panel-border: rgba(255,255,255,.72);
+  --panel-shadow: 0 14px 44px rgba(40,51,33,.04);
+  --panel-blur: 11px;
+
+  --track: #e8ebe3;
+  --track-fill: #8c9b7e;
+
+  /* Choice / Checkbox (2:98–2:104) · Choice / Radio (2:110–2:116) */
+  --option-bg: rgba(255,255,255,.4);
+  --option-border: rgba(36,45,35,.16);
+  --option-radio-border: rgba(36,45,35,.11);
+  --option-hover-bg: #ffffff;
+  --option-hover-border: rgba(36,45,35,.16);
+  --option-selected-bg: rgba(233,238,227,.72);
+  --option-selected-border: #829473;
+  --field-readonly-bg: #edf0e7;          /* review text before Edit (Figma 14:311) */
+  --positive: #4caf50;                   /* Mood: Positive chip (Figma 14:309) */
+
+  /* Button / Primary dark (2:67 / 2:71 / 2:75) */
+  --btn-primary-bg: #1d231b; --btn-primary-hover-bg: #3c4932; --btn-primary-disabled-bg: #a6a8a4; --btn-primary-fg: #ffffff;
+  /* Button / Primary light (2:80 / 2:85 / 2:90) */
+  --btn-secondary-bg: #edf0e7; --btn-secondary-border: #d7decd; --btn-secondary-fg: #414c36;
+  --btn-secondary-hover-bg: #d7decd; --btn-secondary-hover-border: #bcc4b2;
+  --btn-secondary-disabled-bg: #f6f7f3; --btn-secondary-disabled-border: rgba(215,222,205,.45); --btn-disabled-content-opacity: .38;
+
+  --mark: #c8cec2; --mark-checked: #333e2d;   /* checkbox icon fills */
+
+  /* derived (not in Figma) */
+  --error: #a2461a;
+  --focus: #829473;
+  --icon-filter: none;                         /* dark theme lightens the Figma SVG icons */
+
+  /* ---- shape & spacing ---- */
+  --radius-panel: 24px; --radius-option: 12px; --radius-track: 8px; --radius-pill: 50px;
+  --page-pad-top: 40px; --page-pad-x: 64px; --page-pad-bottom: 26px;
+  --panel-w: 580px; --panel-pad: 32px;
+  --gap-page: 32px; --gap-intro: 24px; --gap-heading: 16px; --gap-panel: 24px;
+  --gap-question: 16px; --gap-hint: 12px; --gap-options: 10px; --gap-progress: 11px;
+  --option-pad: 16px; --option-gap: 12px;
+  --btn-h: 48px; --btn-min-w: 120px;
+  --dur: 180ms;
 }
 
-/* Dark — Untitled UI dark-mode scale (gray-950 canvas, remapped grays, same purple brand) */
+/* ---- dark: derived from the Figma palette ---- */
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --gray-25:#13161b; --gray-50:#161b26; --gray-100:#1f242f; --gray-200:#1f242f; --gray-300:#333741;
-  --gray-400:#61646c; --gray-500:#85888e; --gray-600:#94969c; --gray-700:#cecfd2; --gray-800:#ececed; --gray-900:#f5f5f6;
-  --brand-25:#1b1530; --brand-50:#2c1c5f; --brand-100:#2c1c5f; --brand-200:#53389e; --brand-300:#6941c6;
-  --success-50:#053321; --success-200:#085d3a; --success-700:#75e0a7;
-  --error-50:#55160c; --error-200:#912018; --error-700:#fda29b;
-  --warning-50:#4e1d09; --warning-200:#93370d; --warning-700:#fec84b;
-  --blue-50:#102a56; --blue-200:#194185; --blue-700:#84caff;
-  --color-bg:#0c111d; --color-header-bg:#0c111d; --color-surface:#0c111d;
-  --color-text:var(--gray-900); --color-text-muted:var(--gray-600); --color-text-subtle:var(--gray-500);
-  --color-fill:var(--gray-50); --color-fill-strong:var(--gray-100); --color-border:var(--gray-200); --color-border-subtle:var(--gray-200);
-  --color-highlight:var(--brand-50);
-  --tag-generated-fg:#d6bbfb; --tag-mapped-fg:#d6bbfb;
-  --shadow-xs:0 1px 2px rgba(0,0,0,.3); --shadow-sm:0 1px 3px rgba(0,0,0,.4);
+  --page-bg: #121411;
+  --atmo-top: #151713; --atmo-bottom: #0f110e; --atmo-peach: #3a2a1f; --atmo-sage: #22301f;
+  --text: #eef0ea; --text-muted: #a7ad9f; --text-subtle: #8c9285;
+  --panel-bg: rgba(30,34,28,.64); --panel-border: rgba(255,255,255,.08); --panel-shadow: 0 14px 44px rgba(0,0,0,.35);
+  --track: #2b3028; --track-fill: #8c9b7e;
+  --option-bg: rgba(255,255,255,.04); --option-border: rgba(225,234,215,.14); --option-radio-border: rgba(225,234,215,.10);
+  --option-hover-bg: rgba(255,255,255,.09); --option-hover-border: rgba(225,234,215,.22);
+  --option-selected-bg: rgba(130,148,115,.22); --option-selected-border: #829473;
+  --btn-primary-bg: #829473; --btn-primary-hover-bg: #95a687; --btn-primary-disabled-bg: #4a4f47; --btn-primary-fg: #ffffff;
+  --btn-secondary-bg: #262a24; --btn-secondary-border: #363c32; --btn-secondary-fg: #d7decd;
+  --btn-secondary-hover-bg: #363c32; --btn-secondary-hover-border: #4a5145;
+  --btn-secondary-disabled-bg: #1b1e1a; --btn-secondary-disabled-border: rgba(54,60,50,.45);
+  --error: #f0a774;
+  --field-readonly-bg: #262a24;
+  --focus: #a9b89b;
+  --icon-filter: brightness(0) invert(.88);
 }

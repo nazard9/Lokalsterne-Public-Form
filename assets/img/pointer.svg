@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="pointer 1" clip-path="url(#clip0_0_53)">
+<g id="Vector">
+<use xlink:href="#stroke0_0_53" fill="white"/>
+<mask id="stroke1_0_53" fill="white">
+<use xlink:href="#stroke0_0_53"/>
+</mask>
+<path d="M0.7125 2.6525L7.97 23.355C8.455 24.7425 10.4325 24.695 10.855 23.2875L13.485 14.5025C13.6325 14.0125 14.015 13.63 14.5025 13.485L23.2925 10.85C24.7 10.4275 24.745 8.45 23.3575 7.965L2.645 0.7175C1.445 0.3 0.2925 1.4525 0.7125 2.6525Z" stroke-width="2" stroke="black" mask="url(#stroke1_0_53)"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_53">
+<rect width="25" height="25" fill="white"/>
+</clipPath>
+<path id="stroke0_0_53" d="M0.7125 2.6525L7.97 23.355C8.455 24.7425 10.4325 24.695 10.855 23.2875L13.485 14.5025C13.6325 14.0125 14.015 13.63 14.5025 13.485L23.2925 10.85C24.7 10.4275 24.745 8.45 23.3575 7.965L2.645 0.7175C1.445 0.3 0.2925 1.4525 0.7125 2.6525Z"/>
+</defs>
+</svg>
